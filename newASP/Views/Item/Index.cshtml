@@ -1,0 +1,66 @@
+﻿@model IEnumerable<newASP.Models.Item>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layouts/Layout.cshtml";
+}
+
+<h4 class="card-title">Data Item </h4>
+<p>
+    <a href="@Url.Action("Create")" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Create">
+        <i class="mdi mdi-plus"></i>
+        Create
+    </a>
+</p>
+<table id="myItem" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Supplier)
+            </th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Stock)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Supplier.Name)
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = item.Id })" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Edit">
+                        <i class="mdi mdi-pencil"></i>
+
+                    </a> |
+                    <a href="@Url.Action("Details", new { id = item.Id })" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Details">
+                        <i class="mdi mdi-information-variant"></i>
+
+                    </a> |
+                    <a href="@Url.Action("Delete", new { id = item.Id })" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete">
+                        <i class="mdi mdi-delete"></i>
+
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
