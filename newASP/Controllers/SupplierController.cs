@@ -11,7 +11,7 @@ namespace newASP.Controllers
 {
     public class SupplierController : Controller
     {
-        
+        myContext connection = new myContext();
         // GET: Supplier
         public ActionResult Index()
         {
@@ -82,7 +82,7 @@ namespace newASP.Controllers
                     connection.Entry(supplier).State = EntityState.Modified;
                     connection.SaveChanges();
                 }
-                    return RedirectToAction("Index");
+                return RedirectToAction("Index");
             }
             catch
             {
@@ -116,6 +116,18 @@ namespace newASP.Controllers
             {
                 return View();
             }
+        }
+        public ActionResult Add()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Add(Supplier supplier)
+        {
+            connection.Suppliers.Add(supplier);
+            connection.SaveChanges();
+            return RedirectToAction("Index");
+            //return Json(new { success = true, message = "Add Success" }, JsonRequestBehavior.AllowGet);
         }
     }
 }

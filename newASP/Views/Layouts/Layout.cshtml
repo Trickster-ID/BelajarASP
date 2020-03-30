@@ -22,6 +22,7 @@
     <link href="~/Content/Mini AdminPro/main/css/style.css" rel="stylesheet">
     <!-- You can change the theme colors from here -->
     <link href="~/Content/Mini AdminPro/main/css/colors/blue.css" id="theme" rel="stylesheet">
+    <link href="~/Scripts/newscri/jquery-ui.min.css" rel="stylesheet" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -733,10 +734,12 @@
     <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
     <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/newscri/jquery-ui-1.12.1.min.js"></script>
     <!-- end - This is for export functionality only -->
     <script>
+        var popup, datatable;
         $(document).ready(function () {
-            $('#myTable').DataTable({
+            datatable = $('#myTable').DataTable({
                 "columns": [
                     { "Name": "first", "orderable": true },
                     { "Address": "second", "orderable": true },
@@ -745,6 +748,24 @@
                 ]
             })
         });
+        function popupform(url) {
+            var formdiv = $('<div/>');
+            $.get(url)
+                .done(function (response) {
+                    formdiv.html(response);
+
+                    popup = formdiv.dialog({
+                        autoOpen: true,
+                        resizable: true,
+                        title: 'Fill Create Supplier',
+                        height: 500,
+                        width: 700,
+                        close: function () {
+                            popup.dialog('destroy').remove();
+                        }
+                    });
+                });
+        }
     </script>
     <script>
         $(document).ready(function () {
@@ -759,6 +780,11 @@
             })
         });
     </script>
+    @*<script>
+        $('#myBtn').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
+    </script>*@
     <!-- ============================================================== -->
     <!-- Style switcher -->
     <!-- ============================================================== -->

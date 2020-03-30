@@ -3181,6 +3181,20 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\newscri\bootstrap.js" />
+    <Content Include="Scripts\newscri\bootstrap.min.js" />
+    <None Include="Scripts\newscri\jquery-1.12.4.intellisense.js" />
+    <Content Include="Scripts\newscri\jquery-1.12.4.js" />
+    <Content Include="Scripts\newscri\jquery-1.12.4.min.js" />
+    <Content Include="Scripts\newscri\jquery-ui-1.12.1.js" />
+    <Content Include="Scripts\newscri\jquery-ui-1.12.1.min.js" />
+    <None Include="Scripts\newscri\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\newscri\jquery-ui.min.css" />
+    <Content Include="Scripts\newscri\jquery.validate.js" />
+    <Content Include="Scripts\newscri\jquery.validate.min.js" />
+    <Content Include="Scripts\newscri\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\newscri\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\newscri\notify.min.js" />
     <Content Include="Scripts\Supplier.js" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
@@ -4105,6 +4119,9 @@
     <Content Include="Views\Item\Edit.cshtml" />
     <Content Include="Views\Item\Details.cshtml" />
     <Content Include="Views\Item\Delete.cshtml" />
+    <Content Include="Views\Item\Add.cshtml" />
+    <Content Include="Views\Supplier\Add.cshtml" />
+    <Content Include="Scripts\newscri\jquery-1.12.4.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -76,10 +76,10 @@ D:\VisualBC\newASP\newASP\newASP\bin\System.Web.WebPages.Deployment.xml
 D:\VisualBC\newASP\newASP\newASP\bin\System.Web.WebPages.Razor.xml
 D:\VisualBC\newASP\newASP\newASP\bin\Antlr3.Runtime.pdb
 D:\VisualBC\newASP\newASP\newASP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\VisualBC\newASP\newASP\newASP\obj\Debug\newASP.csprojAssemblyReference.cache
 D:\VisualBC\newASP\newASP\newASP\obj\Debug\newASP.Migrations.addtable.resources
 D:\VisualBC\newASP\newASP\newASP\obj\Debug\newASP.csproj.GenerateResource.cache
 D:\VisualBC\newASP\newASP\newASP\obj\Debug\newASP.csproj.CoreCompileInputs.cache
 D:\VisualBC\newASP\newASP\newASP\obj\Debug\newASP.csproj.CopyComplete
 D:\VisualBC\newASP\newASP\newASP\obj\Debug\newASP.dll
 D:\VisualBC\newASP\newASP\newASP\obj\Debug\newASP.pdb
+D:\VisualBC\newASP\newASP\newASP\obj\Debug\newASP.csprojAssemblyReference.cache
